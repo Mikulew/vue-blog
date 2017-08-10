@@ -1,6 +1,6 @@
 <template>
   <div id="single-blog">
-    <h1>{{blog.title | to-uppercase}}</h1>
+    <h1>{{blog.title}}</h1>
     <article>{{blog.content}}</article>
     <div class="single-blog-wrapper">
       <p class="single-blog-author">Author: {{ blog.author }}</p>
@@ -8,6 +8,10 @@
       <ul>
           <li v-for="category in blog.categories">{{ category }}</li>
       </ul>
+      <router-link v-bind:to="'/'">
+        <button class="single-blog-button">Powrót</button>
+      </router-link>
+
     </div>
   </div>
 </template>
@@ -31,6 +35,9 @@ export default {
 </script>
 
 <style scoped>
+  article {
+    margin-top: 20px;
+  }
   #single-blog {
     max-width: 960px;
     margin: 0 auto;
@@ -39,12 +46,17 @@ export default {
     display: flex;
     border: 1px solid #eee;
     padding: 10px;
+    margin-top: 20px;
   }
   .single-blog-categories {
     margin: 10px 5px;
   }
   .single-blog-author {
     margin: 10px;
+  }
+  .single-blog-button {
+    margin: 10px;
+    padding: 0 10px;
   }
   ul {
     display: inline-flex;

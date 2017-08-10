@@ -4,9 +4,9 @@
     <input type="text" placeholder="search blogs" v-model="search">
     <div v-for="blog in filteredBlogs" class="single-blog">
       <router-link v-bind:to="'/blog/' + blog.id">
-        <h2>{{blog.title}}</h2>
+        <h2 class="show-blogs-title">{{blog.title | toUpperCase}}</h2>
       </router-link>
-      <article>{{blog.content | snippet}}</article>
+      <article class="show-blogs-article">{{blog.content | snippet}}</article>
     </div>
   </div>
 </template>
@@ -65,6 +65,9 @@ export default {
     width: 100%;
     padding: 6px 0;
     text-indent: 8px;
+    margin-top: 10px;
+  }
+  .show-blogs-article {
     margin-top: 10px;
   }
 </style>

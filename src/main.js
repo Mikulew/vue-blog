@@ -13,7 +13,7 @@ const router = new VueRouter({
 });
 
 // Filters
-Vue.filter('to-uppercase', (value) => value.toUpperCase());
+Vue.filter('toUpperCase', (value) => value.toUpperCase());
 
 Vue.filter('snippet', (value) => value.slice(0, 500) + '...')
 
