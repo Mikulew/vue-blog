@@ -5,7 +5,7 @@
         <router-link to="/" exact>Blog</router-link>
       </li>
       <li>
-        <router-link to="/add" exact>Add a New Blog</router-link>
+        <router-link to="/add" exact>Add a New Post</router-link>
       </li>
     </ul>
   </nav>

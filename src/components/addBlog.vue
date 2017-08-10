@@ -22,7 +22,7 @@
       <select id="blog-select" v-model="blog.author">
         <option v-for="author in authors">{{author}}</option>
       </select>
-      <button v-on:click.prevent="post">Add Blog</button>
+      <button class="blog-button" v-on:click.prevent="post">Add Post</button>
     </form>
     <div v-if="submitted">
       <h3>Thanks for adding your post!</h3>
@@ -84,6 +84,15 @@ export default {
     display: block;
     width: 100%;
     padding: 8px;
+  }
+  .blog-button {
+    display: block;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #444;
+    padding: 10px 15px;
+    margin-top: 15px;
   }
   #preview {
     padding: 10px 20px;

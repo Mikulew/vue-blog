@@ -55,8 +55,12 @@ export default {
     margin: 10px;
   }
   .single-blog-button {
-    margin: 10px;
-    padding: 0 10px;
+    margin: 0 10px 0 10px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #444;
+    padding: 10px 15px;
   }
   ul {
     display: inline-flex;
